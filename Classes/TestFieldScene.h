@@ -5,6 +5,10 @@
 #include "Bomb.h"
 #include "BombLauncher.h"
 #include "GameConfig.h"
+#include "Character.h"
+#include "Bike.h"
+#include "CraftBomb.h"
+#include "CraftSquare.h"
 
 using namespace cocos2d;
 
@@ -12,12 +16,16 @@ class TestFieldScene :public Scene {
 public:
 	static TestFieldScene* createScene();
 	bool init();
-
+	void update(float delta);
 
 	bool onTouchBegan(cocos2d::Touch* pTouch, cocos2d::Event* pEvent);
 	void onTouchMoved(cocos2d::Touch* pTouch, cocos2d::Event* pEvent);
 	void onTouchEnded(cocos2d::Touch* pTouch, cocos2d::Event* pEvent);
 
+
+
+	Character* player;
+	Bike* bike;
 
 };
 
